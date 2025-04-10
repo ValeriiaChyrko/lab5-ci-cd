@@ -20,7 +20,7 @@ const setup = () => {
 describe('Main', () => {
     it('renders headline and sets up counter', () => {
         setup();
-        const headline = screen.getByText(/Incorrect title/i);
+        const headline = screen.getByText(/Vite \+ TypeScript/i);
         expect(headline).toBeInTheDocument();
 
         const counterButton = screen.getByRole('button', { name: 'count is 0' }); // Перевіряємо кнопку з текстом
