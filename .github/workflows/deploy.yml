@@ -2,7 +2,8 @@
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
@@ -44,3 +45,13 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
+
+  upload-artifacts:
+    name: Upload Artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4  # Оновлення до останньої версії
+        with:
+          name: build-artifacts
+          path: ./dist
