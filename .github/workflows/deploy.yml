@@ -41,6 +41,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ build ]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Ensure repository is checked out in deploy job
+
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
