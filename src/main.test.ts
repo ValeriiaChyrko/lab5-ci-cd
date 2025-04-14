@@ -1,4 +1,4 @@
-﻿import { setupCounter } from './counter'; // Імпортуємо реальну функцію
+﻿import { setupCounter } from './counter';
 import { screen } from '@testing-library/dom';
 import { describe, it, expect } from 'vitest';
 
@@ -14,7 +14,7 @@ const setup = () => {
       </p>
     </div>
   `;
-    setupCounter(document.querySelector<HTMLButtonElement>('#counter')!); // Викликаємо реальну функцію
+    setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 };
 
 describe('Main', () => {
@@ -23,7 +23,7 @@ describe('Main', () => {
         const headline = screen.getByText(/Vite \+ TypeScript/i);
         expect(headline).toBeInTheDocument();
 
-        const counterButton = screen.getByRole('button', { name: 'count is 0' }); // Перевіряємо кнопку з текстом
+        const counterButton = screen.getByRole('button', { name: 'count is 0' });
         expect(counterButton).toBeInTheDocument();
     });
 });
