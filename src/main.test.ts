@@ -1,4 +1,4 @@
-﻿import { setupCounter } from './counter';
+﻿import { setupCounter } from './counter'; // Імпортуємо реальну функцію
 import { screen } from '@testing-library/dom';
 import { describe, it, expect } from 'vitest';
 
